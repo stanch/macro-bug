@@ -19,5 +19,20 @@ class BugSpec extends org.scalatest.FlatSpec {
   Bug.test(3 :: Nil)
 }
 ```
+```
+sbt test
+```
 
 BAM!
+
+tl;dr:
+
+`symbol value x$1 does not exist in bug.BugSpec.<init>`
+```scala
+scala> q"3 :: Nil"
+res0: reflect.runtime.universe.Block =
+{
+  <synthetic> val x$1 = 3;
+  Nil.$colon$colon(x$1)
+}
+```
