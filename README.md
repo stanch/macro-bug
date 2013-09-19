@@ -36,3 +36,8 @@ res0: reflect.runtime.universe.Block =
   Nil.$colon$colon(x$1)
 }
 ```
+
+UPD
+===
+
+Use `${c.resetAllAttrs(code.tree)}`.
